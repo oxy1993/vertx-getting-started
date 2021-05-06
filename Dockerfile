@@ -2,7 +2,7 @@
 FROM vertx/vertx3
 
 #                                                       (1)
-ENV VERTICLE_NAME src.main.kotlin.com.example.reactive.reactive_vertx.Main.kt
+ENV VERTICLE_NAME Main.kt
 ENV VERTICLE_FILE target/vertx-1.0-SNAPSHOT.jar
 
 # Set the location of the verticles
