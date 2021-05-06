@@ -24,7 +24,7 @@
     <vertx.version>3.7.1</vertx.version>
     <junit-jupiter.version>5.4.0</junit-jupiter.version>
 
-    <main.verticle>com.example.reactive.reactive_vertx.MainVerticle</main.verticle>
+    <main.verticle>com.example.reactive.reactive_vertx.Main</main.verticle>
 
     <klaxon-version>5.0.5</klaxon-version>
   </properties>
