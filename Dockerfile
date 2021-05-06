@@ -12,4 +12,4 @@ COPY $VERTICLE_JAR $VERTICLE_HOME/application.jar
 WORKDIR .
 
 # Launch the verticle using 'java -jar verticles/vertx-kube-example-1.1.jar' command
-ENTRYPOINT ["sh", "-c","java -cp $VERTICLE_HOME/application.jar com.example.reactive.reactive_vertx.Main.java"]
+ENTRYPOINT ["sh", "-c","java -cp $VERTICLE_HOME/application.jar com.example.reactive.reactive_vertx.Main"]
