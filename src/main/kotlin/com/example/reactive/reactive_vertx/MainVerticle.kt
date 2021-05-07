@@ -6,9 +6,6 @@ import io.vertx.core.http.HttpMethod
 import io.vertx.ext.web.Router
 import io.vertx.ext.web.handler.CorsHandler;
 
-
-const val TIMEOUT = 0L
-
 class MainVerticle : AbstractVerticle() {
 
   override fun start(startFuture: Future<Void>) {
@@ -40,23 +37,7 @@ class MainVerticle : AbstractVerticle() {
         .allowedMethods(allowedMethods)
     )
 
-    router.route("/cars")
-      .produces("application/stream+json")
-      .handler(AsyncCarResponse())
-      .failureHandler {
-        println("car error asynchron response\n")
-        it.response().end("car error asynchron response\n")
-      }
-
-    router.route("/cars-locust")
-      .produces("application/stream+json")
-      .handler(AsyncCarResponse())
-      .failureHandler {
-        println("car error asynchron response\n")
-        it.response().end("car error asynchron response\n")
-      }
-
-    router.route("/cars")
+    router.route("/hello")
       .produces("application/json")
       .handler(SyncCarResponse())
       .failureHandler {
